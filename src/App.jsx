@@ -169,8 +169,8 @@ export default function App() {
     ];
 
     const blogData = [
-        { title: "Evolution of Language Representation Techniques", desc: "A journey from Bag-of-Words and TF-IDF to advanced models like BERT and GPT.", link: "https://medium.com/" },
-        { title: "Hacking System Design: How Search Engines Work", desc: "Demystifying how search engines rank, retrieve, and understand queries.", link: "https://medium.com/" }
+        { title: "Evolution of Language Representation Techniques", desc: "A journey from Bag-of-Words and TF-IDF to advanced models like BERT and GPT.", link: "https://medium.com/@snehpatel0308/evolution-of-language-representation-techniques-a-journey-from-bow-to-gpt-99707199ef27" },
+        { title: "Hacking System Design: How Search Engines Work", desc: "Demystifying how search engines rank, retrieve, and understand queries.", link: "https://medium.com/@snehpatel0308/hacking-the-system-design-how-search-engines-understand-and-deliver-results-83cf6a469628" }
     ];
     
     const projects = [
