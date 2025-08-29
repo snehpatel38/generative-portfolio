@@ -192,7 +192,7 @@ export default function App() {
                 
                 @media (min-width: 640px) {
                     :root {
-                        --container-padding: 1.5rem;
+                        --container-padding: 4rem;
                     }
                 }
                 
@@ -210,7 +210,7 @@ export default function App() {
                 
                 @media (max-width: 480px) {
                     :root {
-                        --section-padding-y: 4rem;
+                        --section-padding-y: 8rem;
                     }
                 }
                 
