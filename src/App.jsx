@@ -32,33 +32,62 @@ const BackgroundAnimation = () => {
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
 
-            // Starfield
+            // --- Enhanced Starfield ---
             const starVertices = [];
+            const starColors = [];
             for (let i = 0; i < 40000; i++) {
                 const x = THREE.MathUtils.randFloatSpread(3000);
                 const y = THREE.MathUtils.randFloatSpread(3000);
                 const z = THREE.MathUtils.randFloatSpread(3000);
                 starVertices.push(x, y, z);
+                // Add subtle color variation for twinkle
+                const base = 0.7 + Math.random() * 0.3;
+                const color = new THREE.Color().setHSL(0.62 + Math.random() * 0.05, 0.7, base);
+                starColors.push(color.r, color.g, color.b);
             }
             const starGeometry = new THREE.BufferGeometry();
             starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
-            const starMaterial = new THREE.PointsMaterial({ color: 0x6c757d, size: 0.25 });
+            starGeometry.setAttribute('color', new THREE.Float32BufferAttribute(starColors, 3));
+            const starMaterial = new THREE.PointsMaterial({
+                vertexColors: true,
+                size: 0.38,
+                transparent: true,
+                opacity: 0.95,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+            });
             const stars = new THREE.Points(starGeometry, starMaterial);
             scene.add(stars);
 
-            // Nebula/Galaxy Dust
+            // --- Nebula/Galaxy Dust ---
             const dustVertices = [];
+            const dustColors = [];
             for (let i = 0; i < 20000; i++) {
                 const x = THREE.MathUtils.randFloatSpread(2500);
                 const y = THREE.MathUtils.randFloatSpread(2500);
                 const z = THREE.MathUtils.randFloatSpread(2500);
                 dustVertices.push(x, y, z);
+                // Add subtle blue/purple tint
+                const color = new THREE.Color().setHSL(0.62 + Math.random() * 0.08, 0.5, 0.25 + Math.random() * 0.2);
+                dustColors.push(color.r, color.g, color.b);
             }
             const dustGeometry = new THREE.BufferGeometry();
             dustGeometry.setAttribute('position', new THREE.Float32BufferAttribute(dustVertices, 3));
-            const dustMaterial = new THREE.PointsMaterial({ color: 0x495057, size: 0.3 });
+            dustGeometry.setAttribute('color', new THREE.Float32BufferAttribute(dustColors, 3));
+            const dustMaterial = new THREE.PointsMaterial({
+                vertexColors: true,
+                size: 0.32,
+                transparent: true,
+                opacity: 0.7,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+            });
             const dust = new THREE.Points(dustGeometry, dustMaterial);
             scene.add(dust);
+
+            // --- Twinkle Animation ---
+            let twinklePhase = 0;
+            const twinkleSpeed = 0.015;
 
             const handleMouseMove = (e) => {
                 mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
@@ -73,6 +102,23 @@ const BackgroundAnimation = () => {
                 camera.lookAt(scene.position);
                 stars.rotation.y -= 0.00025;
                 dust.rotation.y -= 0.00032;
+
+                // Twinkle effect for stars
+                twinklePhase += twinkleSpeed;
+                const starSizes = [];
+                for (let i = 0; i < 40000; i++) {
+                    // Sine-based twinkle, offset by index
+                    const twinkle = 0.38 + 0.18 * Math.sin(twinklePhase + i * 0.0005);
+                    starSizes.push(twinkle);
+                }
+                if (!starGeometry.getAttribute('size')) {
+                    starGeometry.setAttribute('size', new THREE.Float32BufferAttribute(starSizes, 1));
+                } else {
+                    starGeometry.getAttribute('size').copyArray(starSizes);
+                    starGeometry.getAttribute('size').needsUpdate = true;
+                }
+                starMaterial.size = 0.38 + 0.08 * Math.sin(twinklePhase);
+
                 renderer.render(scene, camera);
             };
             animate();
@@ -250,6 +296,11 @@ export default function App() {
                 /* Mobile Menu */
                 .mobile-menu {
                     padding-top: 4rem;
+                }
+                /* Always dark mobile menu background */
+                .mobile-menu-bg {
+                    background: #18182a !important;
+                    opacity: 0.97;
                 }
                 
                 .mobile-menu-close {
@@ -566,7 +617,7 @@ export default function App() {
                     
                     {/* Mobile Menu */}
                     {isMobileMenuOpen && (
-                        <div className="md:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-50">
+                        <div className="md:hidden fixed inset-0 backdrop-blur-md z-50" style={{ background: '#18182a', opacity: 0.97 }}>
                             <div className="mobile-menu">
                                 <button onClick={closeMobileMenu} className="mobile-menu-close">
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

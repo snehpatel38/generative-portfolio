@@ -1,3 +1,40 @@
+
+
+/* --- Portfolio Responsive Section Padding and Container --- */
+:root {
+  --section-padding-y: 10rem;
+  --container-padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding-y: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding-y: 8rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
 Space-like dark background
 #root {
   /* Remove all the old properties. 
