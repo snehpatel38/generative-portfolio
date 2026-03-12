@@ -659,7 +659,7 @@ export default function App() {
                         <h1 className="hero-title font-extrabold mb-4 text-white">Sneh Patel.</h1>
                         <h2 className="hero-subtitle font-extrabold mb-6 md:mb-8 text-gray-400">Aspiring AI Engineer</h2>
                         <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed px-4">
-                            I am passionate about building intelligent systems that create real-world impact in applied AI, computer vision, and natural language processing. I am particularly interested in leveraging AI for life sciences and healthcare innovations, solving practical problems that improve lives.
+                            I am passionate about building agentic AI systems that can reason, plan, and autonomously execute tasks to solve complex real-world problems. My focus is on designing intelligent agents that integrate large language models, tools, and data pipelines to automate workflows, enhance decision-making, and deliver scalable AI solutions across industries.
                         </p>
                         <div className="flex justify-center items-center gap-6 text-2xl md:text-3xl text-gray-400">
                             <a href="https://github.com/snehpatel38" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors p-2">
