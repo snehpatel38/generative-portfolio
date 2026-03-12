@@ -208,6 +208,7 @@ export default function App() {
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
     const experienceData = [
+        { company: "Smart Tech LLC", role: "Junior AI Engineer", duration: "Sept 2025 - Present", points: ["Designed agentic AI pipelines for clinical data processing enabling autonomous document parsing, reasoning, and task execution across healthcare workflows.", "Managed AI infrastructure and deployment pipelines across Azure with security guardrails, scalable endpoints, and resource optimization."] },        
         { company: "Environomics Projects LLP", role: "Software Developer Intern", duration: "Jan 2025 - April 2025", points: ["Designed an advanced solar analytics dashboard.", "Utilized Prophet model for solar generation forecasting.", "Built a scalable React Native app with Supabase backend."] },
         { company: "Innomatics Research Labs", role: "Data Science Intern", duration: "Sept 2024 - Dec 2024", points: ["Built an AI-powered code reviewer for automated feedback.", "Authored Medium articles on NLP and search engine design.", "Designed ML models for diamond price prediction."] },
         { company: "IBM SkillsBuild", role: "AI/ML Intern", duration: "July 2024 - Aug 2024", points: ["Built a kidney stone prediction model with 81% accuracy.", "Designed a chatbot with WatsonX Assistant for eco-friendly choices."] },
