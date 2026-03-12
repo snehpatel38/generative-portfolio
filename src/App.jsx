@@ -208,7 +208,7 @@ export default function App() {
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
     const experienceData = [
-        { company: "Smart Tech LLC", role: "Junior AI Engineer", duration: "Sept 2025 - Present", points: ["Designed agentic AI pipelines for clinical data processing enabling autonomous document parsing, reasoning, and task execution across healthcare workflows.", "Managed AI infrastructure and deployment pipelines across Azure with security guardrails, scalable endpoints, and resource optimization."] },        
+        { company: "Smart Tech LLC", role: "Junior AI Engineer", duration: "Sept 2025 - Present", points: ["Built agentic AI pipelines for clinical data processing.", "Enabled autonomous document parsing and reasoning.", "Automated task execution across healthcare workflows.", "Developed systems to structure clinical documents.","Managed AI infrastructure on Azure.","Deployed scalable AI endpoints.","Implemented security guardrails for AI systems.","Optimized cloud resources and deployment pipelines."]},
         { company: "Environomics Projects LLP", role: "Software Developer Intern", duration: "Jan 2025 - April 2025", points: ["Designed an advanced solar analytics dashboard.", "Utilized Prophet model for solar generation forecasting.", "Built a scalable React Native app with Supabase backend."] },
         { company: "Innomatics Research Labs", role: "Data Science Intern", duration: "Sept 2024 - Dec 2024", points: ["Built an AI-powered code reviewer for automated feedback.", "Authored Medium articles on NLP and search engine design.", "Designed ML models for diamond price prediction."] },
         { company: "IBM SkillsBuild", role: "AI/ML Intern", duration: "July 2024 - Aug 2024", points: ["Built a kidney stone prediction model with 81% accuracy.", "Designed a chatbot with WatsonX Assistant for eco-friendly choices."] },
@@ -219,7 +219,7 @@ export default function App() {
         { title: "Evolution of Language Representation Techniques", desc: "A journey from Bag-of-Words and TF-IDF to advanced models like BERT and GPT.", link: "https://medium.com/@snehpatel0308/evolution-of-language-representation-techniques-a-journey-from-bow-to-gpt-99707199ef27" },
         { title: "Hacking System Design: How Search Engines Work", desc: "Demystifying how search engines rank, retrieve, and understand queries.", link: "https://medium.com/@snehpatel0308/hacking-the-system-design-how-search-engines-understand-and-deliver-results-83cf6a469628" }
     ];
-    
+
     const projects = [
         { title: "Vehicle Lane-wise Counting", desc: "Real-time vehicle detection and tracking using YOLOv8 and SORT to count vehicles per lane.", tech: ["Python", "OpenCV", "YOLOv8"], link: "https://github.com/snehpatel38/vehicle_analysis", color: "#ffffff" },
         { title: "Infrastructure Change Detection", desc: "A Siamese U-Net model to detect changes in satellite imagery, achieving 97.3% accuracy.", tech: ["PyTorch", "Albumentations"], link: "https://www.kaggle.com/code/snehpatel3/intrastructure-cd", color: "#ffffff" },
@@ -577,14 +577,14 @@ export default function App() {
                     }
                 }
             `}</style>
-            
+
             <BackgroundAnimation />
 
-            <div className="relative min-h-screen" style={{zIndex: 1}}>
+            <div className="relative min-h-screen" style={{ zIndex: 1 }}>
                 <header className="fixed top-0 left-0 right-0 z-50 py-3 md:py-4">
                     <div className="container flex justify-between items-center">
                         <a href="#home" className="text-xl md:text-2xl font-bold text-white tracking-wider">Sneh Patel</a>
-                        
+
                         {/* Desktop Navigation */}
                         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
                             <a href="#about" className="nav-link text-base lg:text-lg font-semibold text-gray-300">About</a>
@@ -593,21 +593,21 @@ export default function App() {
                             <a href="#projects" className="nav-link text-base lg:text-lg font-semibold text-gray-300">Projects</a>
                             <a href="#blog" className="nav-link text-base lg:text-lg font-semibold text-gray-300">Blog</a>
                         </nav>
-                        
+
                         {/* Desktop Social Links */}
                         <div className="hidden md:flex items-center space-x-4 lg:space-x-5">
                             <a href="https://linkedin.com/in/snehpatel38" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-xl lg:text-2xl text-gray-400 hover:text-white transition-colors flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="currentColor" style={{display:'block'}}>
-                                    <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.7V12h3.7v15zm-1.9-17.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1 1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1zm19.5 17.1h-3.7v-7.3c0-1.7-0.6-2.8-2.1-2.8-1.1 0-1.7 0.7-2 1.4-0.1 0.3-0.1 0.7-0.1 1.1V27h-3.7s0-13.7 0-15h3.7v2.1c0.5-0.8 1.4-2.1 3.5-2.1 2.6 0 4.5 1.7 4.5 5.3V27z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="currentColor" style={{ display: 'block' }}>
+                                    <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.7V12h3.7v15zm-1.9-17.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1 1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1zm19.5 17.1h-3.7v-7.3c0-1.7-0.6-2.8-2.1-2.8-1.1 0-1.7 0.7-2 1.4-0.1 0.3-0.1 0.7-0.1 1.1V27h-3.7s0-13.7 0-15h3.7v2.1c0.5-0.8 1.4-2.1 3.5-2.1 2.6 0 4.5 1.7 4.5 5.3V27z" />
                                 </svg>
                             </a>
                             <a href="https://github.com/snehpatel38" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-xl lg:text-2xl text-gray-400 hover:text-white transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.45.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.45.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
                         </div>
-                        
+
                         {/* Mobile Menu Button */}
                         <button onClick={toggleMobileMenu} className="md:hidden text-2xl text-white p-2">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -615,7 +615,7 @@ export default function App() {
                             </svg>
                         </button>
                     </div>
-                    
+
                     {/* Mobile Menu */}
                     {isMobileMenuOpen && (
                         <div className="md:hidden fixed inset-0 backdrop-blur-md z-50" style={{ background: '#18182a', opacity: 0.97 }}>
@@ -633,17 +633,17 @@ export default function App() {
                                     <a href="#blog" onClick={closeMobileMenu} className="mobile-menu-item text-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">Blog</a>
                                     <a href="#resume" onClick={closeMobileMenu} className="mobile-menu-item text-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">Contact</a>
                                 </div>
-                                
+
                                 {/* Mobile Social Links */}
                                 <div className="flex justify-center space-x-6 mt-8 px-6">
                                     <a href="https://linkedin.com/in/snehpatel38" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-2xl text-gray-400 hover:text-white transition-colors">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
-                                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.341-1.248-.822 0-1.358.54-1.358 1.248 0 .694.521 1.248 1.326 1.248h.015zm4.908 8.21h2.4V9.359c0-.215.015-.43.08-.586.176-.43.576-.876 1.247-.876.88 0 1.233.66 1.233 1.63v4.867h2.4V9.19c0-2.22-1.184-3.252-2.764-3.252-1.273 0-1.845.7-2.165 1.19h.015v-1.02h-2.4c.03.66 0 7.225 0 7.225z"/>
+                                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.341-1.248-.822 0-1.358.54-1.358 1.248 0 .694.521 1.248 1.326 1.248h.015zm4.908 8.21h2.4V9.359c0-.215.015-.43.08-.586.176-.43.576-.876 1.247-.876.88 0 1.233.66 1.233 1.63v4.867h2.4V9.19c0-2.22-1.184-3.252-2.764-3.252-1.273 0-1.845.7-2.165 1.19h.015v-1.02h-2.4c.03.66 0 7.225 0 7.225z" />
                                         </svg>
                                     </a>
                                     <a href="https://github.com/snehpatel38" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-2xl text-gray-400 hover:text-white transition-colors">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
-                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.45.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.45.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                         </svg>
                                     </a>
                                 </div>
@@ -664,17 +664,17 @@ export default function App() {
                         <div className="flex justify-center items-center gap-6 text-2xl md:text-3xl text-gray-400">
                             <a href="https://github.com/snehpatel38" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.45.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.45.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
                             <a href="https://linkedin.com/in/snehpatel38" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-xl lg:text-2xl text-gray-400 hover:text-white transition-colors flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="currentColor" style={{display:'block'}}>
-                                    <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.7V12h3.7v15zm-1.9-17.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1 1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1zm19.5 17.1h-3.7v-7.3c0-1.7-0.6-2.8-2.1-2.8-1.1 0-1.7 0.7-2 1.4-0.1 0.3-0.1 0.7-0.1 1.1V27h-3.7s0-13.7 0-15h3.7v2.1c0.5-0.8 1.4-2.1 3.5-2.1 2.6 0 4.5 1.7 4.5 5.3V27z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="currentColor" style={{ display: 'block' }}>
+                                    <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.7V12h3.7v15zm-1.9-17.1c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1 1.2 0 2.1 1 2.1 2.1 0 1.2-1 2.1-2.1 2.1zm19.5 17.1h-3.7v-7.3c0-1.7-0.6-2.8-2.1-2.8-1.1 0-1.7 0.7-2 1.4-0.1 0.3-0.1 0.7-0.1 1.1V27h-3.7s0-13.7 0-15h3.7v2.1c0.5-0.8 1.4-2.1 3.5-2.1 2.6 0 4.5 1.7 4.5 5.3V27z" />
                                 </svg>
                             </a>
                             <a href="mailto:snehpatel0308@gmail.com" className="hover:text-purple-400 transition-colors p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                 </svg>
                             </a>
                         </div>
@@ -730,14 +730,14 @@ export default function App() {
                                             <span className="text-lg font-bold text-purple-300">Languages</span>
                                         </div>
                                         <div className="skill-icons">
-                                            <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" className="skill-icon" onError={e => e.currentTarget.style.display='none'} />
-                                            <img src="https://skillicons.dev/icons?i=c" alt="C" title="C/C++" className="skill-icon" onError={e => e.currentTarget.style.display='none'} />
-                                            <img src="https://skillicons.dev/icons?i=julia" alt="Julia" title="Julia" className="skill-icon" onError={e => e.currentTarget.style.display='none'} />
-                                            <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="SQL" className="skill-icon" onError={e => e.currentTarget.style.display='none'} />
+                                            <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
+                                            <img src="https://skillicons.dev/icons?i=c" alt="C" title="C/C++" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
+                                            <img src="https://skillicons.dev/icons?i=julia" alt="Julia" title="Julia" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
+                                            <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="SQL" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
                                         </div>
                                         <div className="text-gray-200 text-sm">Python, C/C++, Julia, SQL</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-orange-300">Databases</span>
@@ -749,7 +749,7 @@ export default function App() {
                                         </div>
                                         <div className="text-gray-200 text-sm">MySQL, SQLite, PostgreSQL</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-sky-300">Machine Learning</span>
@@ -762,7 +762,7 @@ export default function App() {
                                         </div>
                                         <div className="text-gray-200 text-sm">Linear & Logistic Regression, Decision Trees, SVM, Random Forest, Clustering, EDA, Model Evaluation</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-pink-300">Deep Learning</span>
@@ -773,7 +773,7 @@ export default function App() {
                                         </div>
                                         <div className="text-gray-200 text-sm">ANN, CNN, RNN, LSTM, GRU, Transformers, BERT, GPT, Transfer Learning</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-green-300">NLP & LLMs</span>
@@ -788,7 +788,7 @@ export default function App() {
                                         </div>
                                         <div className="text-gray-200 text-sm">HuggingFace Transformers, Tokenization, Attention Mechanisms, Chatbot Development, Sentiment Analysis</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-lime-300">Development</span>
@@ -801,7 +801,7 @@ export default function App() {
                                         </div>
                                         <div className="text-gray-200 text-sm">Flask, FastAPI, Streamlit, ONNX</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-yellow-300">Computer Vision</span>
@@ -809,11 +809,11 @@ export default function App() {
                                         <div className="skill-icons">
                                             <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/OpenCV-Dark.svg" alt="OpenCV" title="OpenCV" className="skill-icon" />
                                             <img src="https://e7.pngegg.com/pngimages/437/823/png-clipart-yolo-object-detection-darknet-opencv-convolutional-neural-network-joint-miscellaneous-text-thumbnail.png" alt="YOLO" title="YOLO" className="skill-icon" />
-                                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Matlab-Dark.svg" alt="Matlab" title="Matlab" className="skill-icon" />    
+                                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Matlab-Dark.svg" alt="Matlab" title="Matlab" className="skill-icon" />
                                         </div>
                                         <div className="text-gray-200 text-sm">OpenCV, Scikit-Image, Matlab, YOLO</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-blue-300">Tools & Platforms</span>
@@ -829,14 +829,14 @@ export default function App() {
                                         </div>
                                         <div className="text-gray-200 text-sm">Git, Docker, Jupyter Notebook, VS Code, Anaconda, Spyder, Arduino IDE</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-red-300">Medical Imaging</span>
                                         </div>
                                         <div className="text-gray-200 text-sm">NiBabel, PyDicom, 3D Slicer, MONAI (beginner)</div>
                                     </div>
-                                    
+
                                     <div className="skill-category">
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="text-lg font-bold text-teal-300">Geospatial & Remote Sensing</span>
@@ -846,7 +846,7 @@ export default function App() {
                                 </div>
                             </div>
                         </section>
-                        
+
                         {/* Projects Section */}
                         <section id="projects">
                             <h2 className="section-title font-bold mb-8 md:mb-10 text-center text-white">Featured Projects</h2>
@@ -880,7 +880,7 @@ export default function App() {
                                 ))}
                             </div>
                         </section>
-                        
+
                         {/* Contact Section */}
                         <section id="resume" className="text-center">
                             <h2 className="section-title font-bold mb-6 text-white">Get In Touch</h2>
