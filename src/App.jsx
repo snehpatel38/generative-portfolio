@@ -208,7 +208,7 @@ export default function App() {
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
     const experienceData = [
-        { company: "Smart Tech LLC", role: "Junior AI Engineer", duration: "Sept 2025 - Present", points: ["Built agentic AI pipelines for clinical data processing.", "Enabled autonomous document parsing and reasoning.", "Automated task execution across healthcare workflows.", "Developed systems to structure clinical documents.","Managed AI infrastructure on Azure.","Deployed scalable AI endpoints.","Implemented security guardrails for AI systems.","Optimized cloud resources and deployment pipelines."]},
+        { company: "Smart Tech LLC", role: "JAI Engineer", duration: "Cot 2025 - Present", points: ["Built agentic AI pipelines for clinical data processing.", "Enabled autonomous document parsing and reasoning.", "Automated task execution across healthcare workflows.", "Developed systems to structure clinical documents.","Managed AI infrastructure on Azure.","Deployed scalable AI endpoints.","Implemented security guardrails for AI systems.","Optimized cloud resources and deployment pipelines."]},
         { company: "Environomics Projects LLP", role: "Software Developer Intern", duration: "Jan 2025 - April 2025", points: ["Designed an advanced solar analytics dashboard.", "Utilized Prophet model for solar generation forecasting.", "Built a scalable React Native app with Supabase backend."] },
         { company: "Innomatics Research Labs", role: "Data Science Intern", duration: "Sept 2024 - Dec 2024", points: ["Built an AI-powered code reviewer for automated feedback.", "Authored Medium articles on NLP and search engine design.", "Designed ML models for diamond price prediction."] },
         { company: "IBM SkillsBuild", role: "AI/ML Intern", duration: "July 2024 - Aug 2024", points: ["Built a kidney stone prediction model with 81% accuracy.", "Designed a chatbot with WatsonX Assistant for eco-friendly choices."] },
@@ -221,12 +221,12 @@ export default function App() {
     ];
 
     const projects = [
-        { title: "Vehicle Lane-wise Counting", desc: "Real-time vehicle detection and tracking using YOLOv8 and SORT to count vehicles per lane.", tech: ["Python", "OpenCV", "YOLOv8"], link: "https://github.com/snehpatel38/vehicle_analysis", color: "#ffffff" },
+        // { title: "Vehicle Lane-wise Counting", desc: "Real-time vehicle detection and tracking using YOLOv8 and SORT to count vehicles per lane.", tech: ["Python", "OpenCV", "YOLOv8"], link: "https://github.com/snehpatel38/vehicle_analysis", color: "#ffffff" },
         { title: "Infrastructure Change Detection", desc: "A Siamese U-Net model to detect changes in satellite imagery, achieving 97.3% accuracy.", tech: ["PyTorch", "Albumentations"], link: "https://www.kaggle.com/code/snehpatel3/intrastructure-cd", color: "#ffffff" },
         { title: "3D Brain Tumor Segmentation", desc: "Developed a 3D U-Net for MRI scan segmentation, achieving 96% validation accuracy.", tech: ["TensorFlow", "Keras", "Nibabel"], link: "https://snehpatel38.github.io/BraTS_segmentation_Using_3D_UNet/", color: "#ffffff" },
         { title: "MediLex: AI Medical Assistant", desc: "A RAG system for medical document Q&A using LangChain and Llama models.", tech: ["LangChain", "Streamlit", "FAISS"], link: "https://github.com/snehpatel38/MediLex", color: "#ffffff" },
         { title: "Workout Recommendation System", desc: "A content-based filtering system to provide personalized workout suggestions.", tech: ["Flask", "Scikit-learn", "Docker"], link: "https://snehpatel38.github.io/workout_recommendation_system/", color: "#ffffff" },
-        { title: "Sentiment Analysis on Reviews", desc: "Applied a pre-trained BERT model for sentiment scoring on multilingual restaurant reviews.", tech: ["BERT", "PyTorch", "Hugging Face"], link: "https://github.com/snehpatel38/Sentiment_analysis_on_restaurant", color: "#ffffff" }
+        // { title: "Sentiment Analysis on Reviews", desc: "Applied a pre-trained BERT model for sentiment scoring on multilingual restaurant reviews.", tech: ["BERT", "PyTorch", "Hugging Face"], link: "https://github.com/snehpatel38/Sentiment_analysis_on_restaurant", color: "#ffffff" }
     ];
 
     return (
