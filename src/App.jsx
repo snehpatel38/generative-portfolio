@@ -659,7 +659,7 @@ export default function App() {
                         <div className="container">
                             <p className="mono hero-tag text-sm md:text-base mb-6">HI, I'M —</p>
                             <h1 className="hero-title mb-4">Sneh Patel.</h1>
-                            <p className="hero-subtitle mb-8">Aspiring AI Engineer</p>
+                            <p className="hero-subtitle mb-8">AI and Data Engineer</p>
                             <div className="hero-rule pt-6 max-w-3xl">
                                 <p className="text-base md:text-lg text-[#F2F1EA] leading-relaxed">
                                     I am passionate about building agentic AI systems that can reason, plan, and autonomously execute tasks to solve complex real-world problems. My focus is on designing intelligent agents that integrate large language models, tools, and data pipelines to automate workflows, enhance decision-making, and deliver scalable AI solutions across industries.
