@@ -268,6 +268,14 @@ export default function App() {
     ];
 
     const projects = [
+        {
+            title: "Patient Referral Management System",
+            company: "Smart Tech LLC",
+            status: "COMPLETED",
+            desc: "Built an AI-powered healthcare referral platform that automates SMS/MMS referral intake, OCR-based document extraction, referral validation, and clinic-to-clinic routing. Developed FastAPI backend services with asynchronous processing and integrated Twilio for real-time referral communication, alongside a React Native admin application for clinic/contact management and referral tracking. Created an OCR Agent using Databricks Agent Framework and designed a Medallion Architecture (Bronze → Silver → Gold) to process, standardize, validate, and serve referral data.",
+            tech: ["Databricks", "Databricks Agent Framework", "Medallion Architecture", "FastAPI", "Python", "Twilio", "React Native", "OCR"],
+            link: "#experience"
+        },
         { title: "Infrastructure Change Detection", desc: "A Siamese U-Net model to detect changes in satellite imagery, achieving 97.3% accuracy.", tech: ["PyTorch", "Albumentations"], link: "https://www.kaggle.com/code/snehpatel3/intrastructure-cd" },
         { title: "3D Brain Tumor Segmentation", desc: "Developed a 3D U-Net for MRI scan segmentation, achieving 96% validation accuracy.", tech: ["TensorFlow", "Keras", "Nibabel"], link: "https://snehpatel38.github.io/BraTS_segmentation_Using_3D_UNet/" },
         { title: "MediLex: AI Medical Assistant", desc: "A RAG system for medical document Q&A using LangChain and Llama models.", tech: ["LangChain", "Streamlit", "FAISS"], link: "https://github.com/snehpatel38/MediLex" },
@@ -1046,7 +1054,11 @@ export default function App() {
                                 {projects.map((p, idx) => (
                                     <div key={p.title + idx} className="project-card p-5 md:p-6">
                                         <span className="project-index">PROJECT_{String(idx + 1).padStart(2, '0')}</span>
-                                        <h3 className="text-lg md:text-xl font-bold mb-3 text-[#F2F1EA]">{p.title}</h3>
+                                        <div className="flex items-center justify-between gap-3 mb-2">
+                                            <h3 className="text-lg md:text-xl font-bold text-[#F2F1EA]">{p.title}</h3>
+                                            {p.status && <span className="exp-badge" style={{ marginTop: 0 }}>{p.status}</span>}
+                                        </div>
+                                        {p.company && <p className="exp-company mb-3">{p.company}</p>}
                                         <p className="text-[#F2F1EA] flex-grow text-sm md:text-base mb-4">{p.desc}</p>
                                         <div className="flex flex-wrap gap-2 mb-4">
                                             {p.tech.map((t, i) => (
