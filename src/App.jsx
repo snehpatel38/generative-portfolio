@@ -155,12 +155,111 @@ export default function App() {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+    const SkillIcon = ({ src, alt }) => (
+        <img
+            src={src}
+            alt={alt}
+            title={alt}
+            className="skill-icon"
+            loading="lazy"
+            onError={e => { e.currentTarget.style.display = 'none'; }}
+        />
+    );
+
+    const skillIcons = {
+        python: "https://cdn.simpleicons.org/python",
+        cpp: "https://cdn.simpleicons.org/cplusplus",
+        julia: "https://cdn.simpleicons.org/julia",
+        sql: "https://cdn.simpleicons.org/mysql",
+        react: "https://cdn.simpleicons.org/react",
+        javascript: "https://cdn.simpleicons.org/javascript",
+        html: "https://cdn.simpleicons.org/html5",
+        css: "https://cdn.simpleicons.org/css3",
+        spark: "https://cdn.simpleicons.org/apachespark",
+        mysql: "https://cdn.simpleicons.org/mysql",
+        sqlite: "https://cdn.simpleicons.org/sqlite",
+        postgres: "https://cdn.simpleicons.org/postgresql",
+        sklearn: "https://cdn.simpleicons.org/scikitlearn",
+        pandas: "https://cdn.simpleicons.org/pandas",
+        numpy: "https://cdn.simpleicons.org/numpy",
+        matplotlib: "https://cdn.simpleicons.org/matplotlib",
+        tensorflow: "https://cdn.simpleicons.org/tensorflow",
+        pytorch: "https://cdn.simpleicons.org/pytorch",
+        huggingface: "https://cdn.simpleicons.org/huggingface",
+        langchain: "https://cdn.simpleicons.org/langchain",
+        google: "https://cdn.simpleicons.org/googlegemini",
+        openai: "https://cdn.simpleicons.org/openai",
+        mistral: "https://cdn.simpleicons.org/mistralai",
+        meta: "https://cdn.simpleicons.org/meta",
+        kafka: "https://cdn.simpleicons.org/apachekafka",
+        flink: "https://cdn.simpleicons.org/apacheflink",
+        databricks: "https://cdn.simpleicons.org/databricks",
+        delta: "https://cdn.simpleicons.org/delta",
+        aws: "https://cdn.simpleicons.org/amazonwebservices",
+        gcp: "https://cdn.simpleicons.org/googlecloud",
+        azure: "https://cdn.simpleicons.org/microsoftazure",
+        airflow: "https://cdn.simpleicons.org/apacheairflow",
+        tableau: "https://cdn.simpleicons.org/tableau",
+        powerbi: "https://cdn.simpleicons.org/powerbi",
+        looker: "https://cdn.simpleicons.org/looker",
+        docker: "https://cdn.simpleicons.org/docker",
+        kubernetes: "https://cdn.simpleicons.org/kubernetes",
+        terraform: "https://cdn.simpleicons.org/terraform",
+        git: "https://cdn.simpleicons.org/git",
+        github: "https://cdn.simpleicons.org/github",
+        flask: "https://cdn.simpleicons.org/flask",
+        fastapi: "https://cdn.simpleicons.org/fastapi",
+        streamlit: "https://cdn.simpleicons.org/streamlit",
+        onnx: "https://cdn.simpleicons.org/onnx",
+        opencv: "https://cdn.simpleicons.org/opencv",
+        matlab: "https://cdn.simpleicons.org/matlab",
+        qgis: "https://cdn.simpleicons.org/qgis",
+        arduino: "https://cdn.simpleicons.org/arduino",
+        vscode: "https://cdn.simpleicons.org/visualstudiocode",
+        anaconda: "https://cdn.simpleicons.org/anaconda",
+        android: "https://cdn.simpleicons.org/android",
+        grpc: "https://cdn.simpleicons.org/grpc",
+        json: "https://cdn.simpleicons.org/json",
+        yaml: "https://cdn.simpleicons.org/yaml",
+        parquet: "https://cdn.simpleicons.org/apacheparquet",
+        mongodb: "https://cdn.simpleicons.org/mongodb",
+        qdrant: "https://cdn.simpleicons.org/qdrant",
+        earthengine: "https://cdn.simpleicons.org/googleearthengine",
+        dicom: "https://cdn.simpleicons.org/dicom",
+    };
+
+    const renderSkillIcons = (items) => (
+        <div className="skill-icons">
+            {items.map(([key, label]) => skillIcons[key] && (
+                <SkillIcon key={`${key}-${label}`} src={skillIcons[key]} alt={label} />
+            ))}
+        </div>
+    );
+
     const experienceData = [
-        { company: "Smart Tech LLC", role: "AI Engineer", duration: "Oct 2025 — Present", points: ["Built agentic AI pipelines for clinical data processing.", "Enabled autonomous document parsing and reasoning.", "Automated task execution across healthcare workflows.", "Developed systems to structure clinical documents.", "Managed AI infrastructure on Azure.", "Deployed scalable AI endpoints.", "Implemented security guardrails for AI systems.", "Optimized cloud resources and deployment pipelines."] },
-        { company: "Environomics Projects LLP", role: "Software Developer Intern", duration: "Jan 2025 — Apr 2025", points: ["Designed an advanced solar analytics dashboard.", "Utilized Prophet model for solar generation forecasting.", "Built a scalable React Native app with Supabase backend."] },
+        { company: "Smart Tech LLC", role: "AI Engineer", duration: "Oct 2025 — Present", points: ["Architected and implemented Azure-based data and AI workflows for clinical document processing, document understanding, clinical note generation, and workflow automation across healthcare use cases.", "Built a Natural Language-to-SQL Patient Referral system using Databricks SQL and Python, enabling natural-language analytics across 5K+ patient referral records and reducing manual data-querying effort by 60%.", "Developed a Clinical OCR Agent using Azure AI Document Intelligence, Python, and LLM-based extraction, processing 2K+ medical reports and improving structured information extraction accuracy from 78% to 94%.", "Built a Clinical Speech-to-Text Agent using OpenAI Whisper, processing 1,000+ hours of clinical audio and integrating transcription with downstream NLP, summarization, and clinical note-generation workflows.", "Implemented PII/PHI Detection and De-identification pipelines across 5K+ healthcare records, supporting HIPAA-aware data processing and controlled downstream access.", "Engineered hybrid retrieval pipelines to optimize RAG — improved Agentic RAG performance (BM25 + Embeddings, Qdrant Vector Database) with 10× faster ingestion and 55% token cost reduction via context-preserving chunking.", "Engineered a \"Trust Engine\" using LLM-as-a-judge to score accuracy, hallucination, and relevance, automatically boosting production agents' average accuracy from 70% to 93%.", "Enabled enterprise-aware context via vector indexing and dynamic business terminology grounding (e.g., \"Rx\" = Prescription, not restaurant), powering 3+ agents with consistent definitions."] },
+        { company: "Environomics Projects LLP", role: "Software Developer Intern", duration: "Jan 2025 — Apr 2025", points: ["Engineered AWS-based data pipelines using Amazon S3, AWS Lambda, and AWS Glue to ingest and transform 200K+ records from 4+ data sources, including real-time weather, solar generation, inverter telemetry, and energy-production data.", "Built time-series forecasting and anomaly-detection pipelines for 50K+ energy and inverter observations.", "Developed Tableau dashboards for real-time inverter monitoring, energy-yield tracking, operational performance, and KPI visualization."] },
         { company: "Innomatics Research Labs", role: "Data Science Intern", duration: "Sep 2024 — Dec 2024", points: ["Built an AI-powered code reviewer for automated feedback.", "Authored Medium articles on NLP and search engine design.", "Designed ML models for diamond price prediction."] },
         { company: "IBM SkillsBuild", role: "AI/ML Intern", duration: "Jul 2024 — Aug 2024", points: ["Built a kidney stone prediction model with 81% accuracy.", "Designed a chatbot with WatsonX Assistant for eco-friendly choices."] },
         { company: "Infolabz IT Services", role: "Data Analysis and ML Intern", duration: "Jun 2024 — Jul 2024", points: ["Designed ETL pipelines with Python to transform API data.", "Built a house price prediction app using Streamlit.", "Trained a CNN to classify images of tablets and laptops."] }
+    ];
+
+    const certifications = [
+        {
+            title: "Databricks Certified Machine Learning Professional",
+            issuer: "DATABRICKS",
+            link: "https://www.databricks.com/learn/training/certification"
+        },
+        {
+            title: "Databricks Certified Machine Learning Associate",
+            issuer: "DATABRICKS",
+            link: "https://www.databricks.com/learn/training/certification"
+        },
+        {
+            title: "Machine Learning Specialization",
+            issuer: "DEEPLEARNING.AI",
+            link: "https://www.deeplearning.ai/specializations/machine-learning"
+        }
     ];
 
     const blogData = [
@@ -541,6 +640,43 @@ export default function App() {
                 .skill-icons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
                 .skill-icon { width: 28px; height: 28px; }
 
+                /* Certifications */
+                .cert-grid {
+                    display: grid;
+                    gap: 1.5rem;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                }
+                @media (max-width: 640px) { .cert-grid { grid-template-columns: 1fr; } }
+                .cert-card {
+                    background: var(--panel);
+                    border: var(--border);
+                    box-shadow: 6px 6px 0 var(--amber);
+                    padding: 1.5rem;
+                    transition: transform 0.12s ease, box-shadow 0.12s ease;
+                }
+                .cert-card:hover {
+                    transform: translate(-4px, -4px);
+                    box-shadow: 10px 10px 0 var(--red);
+                }
+                .cert-issuer {
+                    font-family: 'JetBrains Mono', monospace;
+                    font-size: 0.75rem;
+                    color: var(--amber);
+                    letter-spacing: 0.04em;
+                    margin-bottom: 0.5rem;
+                    display: block;
+                }
+                .cert-link {
+                    color: var(--ink);
+                    text-decoration: none;
+                    border-bottom: 2px solid transparent;
+                    transition: color 0.12s ease, border-color 0.12s ease;
+                }
+                .cert-link:hover {
+                    color: var(--amber);
+                    border-bottom-color: var(--red);
+                }
+
                 /* Blog */
                 .blog-grid {
                     display: grid;
@@ -591,6 +727,7 @@ export default function App() {
                             <a href="#about" className="nav-link text-sm lg:text-base font-semibold">About</a>
                             <a href="#experience" className="nav-link text-sm lg:text-base font-semibold">Experience</a>
                             <a href="#skills" className="nav-link text-sm lg:text-base font-semibold">Skills</a>
+                            <a href="#certifications" className="nav-link text-sm lg:text-base font-semibold">Certs</a>
                             <a href="#projects" className="nav-link text-sm lg:text-base font-semibold">Projects</a>
                             <a href="#blog" className="nav-link text-sm lg:text-base font-semibold">Blog</a>
                         </nav>
@@ -630,6 +767,7 @@ export default function App() {
                                     <a href="#about" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">About</a>
                                     <a href="#experience" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">Experience</a>
                                     <a href="#skills" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">Skills</a>
+                                    <a href="#certifications" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">Certifications</a>
                                     <a href="#projects" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">Projects</a>
                                     <a href="#blog" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">Blog</a>
                                     <a href="#resume" onClick={closeMobileMenu} className="mobile-menu-item text-lg transition-colors">Contact</a>
@@ -662,13 +800,13 @@ export default function App() {
                             <p className="hero-subtitle mb-8">AI and Data Engineer</p>
                             <div className="hero-rule pt-6 max-w-3xl">
                                 <p className="text-base md:text-lg text-[#F2F1EA] leading-relaxed">
-                                    I am passionate about building agentic AI systems that can reason, plan, and autonomously execute tasks to solve complex real-world problems. My focus is on designing intelligent agents that integrate large language models, tools, and data pipelines to automate workflows, enhance decision-making, and deliver scalable AI solutions across industries.
+                                    Detail-oriented AI + Data Engineer building scalable agentic AI platforms, RAG architectures, LLM evaluation frameworks, and data engineering ecosystems across AWS, Azure, and GCP. I partner with software architects to turn business requirements into data products that drive efficiency and cost savings.
                                 </p>
                             </div>
                             <div className="status-strip mono mt-6 max-w-3xl">
                                 <span className="status-item"><span className="status-dot online"></span>Open to opportunities</span>
                                 <span className="status-item"><span className="status-dot"></span>Ahmedabad, India</span>
-                                <span className="status-item"><span className="status-dot"></span>Focus: Agentic AI Systems</span>
+                                <span className="status-item"><span className="status-dot"></span>Focus: Agentic AI & Data Engineering</span>
                             </div>
                             <div className="flex items-center gap-3 mt-8">
                                 <a href="https://github.com/snehpatel38" target="_blank" rel="noopener noreferrer" className="icon-btn">
@@ -750,109 +888,160 @@ export default function App() {
                                 <div className="skills-grid">
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Languages</div>
-                                        <div className="skill-icons">
-                                            <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
-                                            <img src="https://skillicons.dev/icons?i=c" alt="C" title="C/C++" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
-                                            <img src="https://skillicons.dev/icons?i=julia" alt="Julia" title="Julia" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
-                                            <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="SQL" className="skill-icon" onError={e => e.currentTarget.style.display = 'none'} />
-                                        </div>
-                                        <div className="skill-cat-body">Python, C/C++, Julia, SQL</div>
+                                        {renderSkillIcons([
+                                            ["python","Python"], ["cpp","C/C++"], ["julia","Julia"],
+                                            ["sql","SQL"], ["spark","PySpark / Spark"], ["react","React"],
+                                            ["javascript","JavaScript"], ["html","HTML"], ["css","CSS"]
+                                        ])}
+                                        <div className="skill-cat-body">Python, SQL, Spark/PySpark, C/C++, Julia, React, JavaScript, HTML/CSS</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Databases</div>
-                                        <div className="skill-icons">
-                                            <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="MySQL" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" title="SQLite" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" title="PostgreSQL" className="skill-icon" />
-                                        </div>
+                                        {renderSkillIcons([
+                                            ["mysql","MySQL"], ["sqlite","SQLite"], ["postgres","PostgreSQL"], ["mongodb","MongoDB"]
+                                        ])}
                                         <div className="skill-cat-body">MySQL, SQLite, PostgreSQL</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Machine Learning</div>
-                                        <div className="skill-icons">
-                                            <img src="https://icon.icepanel.io/Technology/svg/scikit-learn.svg" alt="Scikit-learn" title="Scikit-learn" className="skill-icon" />
-                                            <img src="https://icon.icepanel.io/Technology/png-shadow-512/Pandas.png" alt="Pandas" title="Pandas" className="skill-icon" />
-                                            <img src="https://icon.icepanel.io/Technology/svg/NumPy.svg" alt="NumPy" title="NumPy" className="skill-icon" />
-                                            <img src="https://icon.icepanel.io/Technology/svg/Matplotlib.svg" alt="Matplotlib" title="Matplotlib" className="skill-icon" />
-                                        </div>
-                                        <div className="skill-cat-body">Linear & Logistic Regression, Decision Trees, SVM, Random Forest, Clustering, EDA, Model Evaluation</div>
+                                        {renderSkillIcons([
+                                            ["sklearn","Scikit-learn"], ["pandas","Pandas"], ["numpy","NumPy"], ["matplotlib","Matplotlib"]
+                                        ])}
+                                        <div className="skill-cat-body">Regression, Classification, Clustering, NLP, Time Series Forecasting, Hyperparameter Tuning, Model Evaluation</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Deep Learning</div>
-                                        <div className="skill-icons">
-                                            <img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow" title="TensorFlow" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" title="PyTorch" className="skill-icon" />
-                                        </div>
+                                        {renderSkillIcons([
+                                            ["tensorflow","TensorFlow"], ["pytorch","PyTorch"]
+                                        ])}
                                         <div className="skill-cat-body">ANN, CNN, RNN, LSTM, GRU, Transformers, BERT, GPT, Transfer Learning</div>
                                     </div>
 
                                     <div className="skill-category">
-                                        <div className="skill-cat-label mb-4">NLP & LLMs</div>
-                                        <div className="skill-icons">
-                                            <img src="https://custom.typingmind.com/assets/models/huggingface.png" alt="HuggingFace" title="HuggingFace" className="skill-icon" />
-                                            <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/langchain-color.png" alt="LangChain" title="LangChain" className="skill-icon" />
-                                            <img src="https://custom.typingmind.com/assets/models/gemini.png" alt="Gemini" title="Gemini" className="skill-icon" />
-                                            <img src="https://custom.typingmind.com/assets/models/gpt-35.webp" alt="GPT-35" title="GPT-35" className="skill-icon" />
-                                            <img src="https://custom.typingmind.com/assets/models/mistralai.png" alt="Mistral" title="Mistral" className="skill-icon" />
-                                            <img src="https://custom.typingmind.com/assets/models/llama.png" alt="LLaMA" title="LLaMA" className="skill-icon" />
-                                        </div>
-                                        <div className="skill-cat-body">HuggingFace Transformers, Tokenization, Attention Mechanisms, Chatbot Development, Sentiment Analysis</div>
+                                        <div className="skill-cat-label mb-4">Generative AI & Agents</div>
+                                        {renderSkillIcons([
+                                            ["openai","OpenAI"], ["google","Gemini"], ["huggingface","Hugging Face"],
+                                            ["langchain","LangChain"], ["mistral","Mistral"], ["meta","LLaMA"],
+                                            ["qdrant","Qdrant"]
+                                        ])}
+                                        <div className="skill-cat-body">OpenAI & Gemini APIs, LangChain, LangGraph, MCP, A2A, RAG & Agentic RAG, LLM-as-a-Judge, Prompt Engineering, Vector Databases (Qdrant), Sparse-Dense Embeddings</div>
+                                    </div>
+
+                                    <div className="skill-category">
+                                        <div className="skill-cat-label mb-4">Data Engineering & Distributed Computing</div>
+                                        {renderSkillIcons([
+                                            ["python","Python"], ["spark","Apache Spark"], ["kafka","Kafka"], ["flink","Apache Flink"]
+                                        ])}
+                                        <div className="skill-cat-body">Apache Spark, PySpark, Apache Flink, ETL/ELT, Data Pipelines, Data Quality</div>
+                                    </div>
+
+                                    <div className="skill-category">
+                                        <div className="skill-cat-label mb-4">Data Lakehouse & Warehousing</div>
+                                        {renderSkillIcons([
+                                            ["databricks","Databricks"], ["delta","Delta Lake"], ["aws","Amazon Redshift"], ["gcp","BigQuery"]
+                                        ])}
+                                        <div className="skill-cat-body">Redshift, BigQuery, Databricks, Delta Lake, Data Mesh</div>
+                                    </div>
+
+                                    <div className="skill-category">
+                                        <div className="skill-cat-label mb-4">Orchestration & Visualization</div>
+                                        {renderSkillIcons([
+                                            ["airflow","Airflow"], ["tableau","Tableau"], ["powerbi","Power BI"], ["looker","Looker"]
+                                        ])}
+                                        <div className="skill-cat-body">Airflow, Control-M, Talend · Tableau, Power BI, Looker, Sigma Computing, ThoughtSpot</div>
+                                    </div>
+
+                                    <div className="skill-category">
+                                        <div className="skill-cat-label mb-4">Cloud & DevOps</div>
+                                        {renderSkillIcons([
+                                            ["aws","AWS"], ["azure","Azure"], ["gcp","GCP"], ["git","Git"],
+                                            ["docker","Docker"], ["kubernetes","Kubernetes"], ["terraform","Terraform"]
+                                        ])}
+                                        <div className="skill-cat-body">AWS, Azure, GCP, Git, CI/CD, Terraform, Docker, Kubernetes</div>
+                                    </div>
+
+                                    <div className="skill-category">
+                                        <div className="skill-cat-label mb-4">Formats & Interfaces</div>
+                                        {renderSkillIcons([
+                                            ["grpc","gRPC"], ["json","JSON"], ["yaml","YAML"], ["parquet","Parquet"], ["delta","Delta Lake"]
+                                        ])}
+                                        <div className="skill-cat-body">gRPC, REST APIs, Parquet, Iceberg, Delta, JSON, YAML</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Development</div>
-                                        <div className="skill-icons">
-                                            <img src="https://skillicons.dev/icons?i=flask" alt="Flask" title="Flask" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=fastapi" alt="FastAPI" title="FastAPI" className="skill-icon" />
-                                            <img src="https://img.icons8.com/?size=100&id=Rffi8qeb2fK5&format=png&color=000000" className="skill-icon" />
-                                            <img src="https://www.vectorlogo.zone/logos/onnxai/onnxai-icon.svg" alt="ONNX" title="ONNX" className="skill-icon" />
-                                        </div>
+                                        {renderSkillIcons([
+                                            ["flask","Flask"], ["fastapi","FastAPI"], ["streamlit","Streamlit"],
+                                            ["onnx","ONNX"], ["vscode","VS Code"], ["git","Git"]
+                                        ])}
                                         <div className="skill-cat-body">Flask, FastAPI, Streamlit, ONNX</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Computer Vision</div>
-                                        <div className="skill-icons">
-                                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/OpenCV-Dark.svg" alt="OpenCV" title="OpenCV" className="skill-icon" />
-                                            <img src="https://e7.pngegg.com/pngimages/437/823/png-clipart-yolo-object-detection-darknet-opencv-convolutional-neural-network-joint-miscellaneous-text-thumbnail.png" alt="YOLO" title="YOLO" className="skill-icon" />
-                                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Matlab-Dark.svg" alt="Matlab" title="Matlab" className="skill-icon" />
-                                        </div>
+                                        {renderSkillIcons([
+                                            ["opencv","OpenCV"], ["pytorch","PyTorch"], ["matlab","MATLAB"]
+                                        ])}
                                         <div className="skill-cat-body">OpenCV, Scikit-Image, Matlab, YOLO</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Tools & Platforms</div>
-                                        <div className="skill-icons">
-                                            <img src="https://skillicons.dev/icons?i=git" alt="Git" title="Git" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=docker" alt="Docker" title="Docker" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" title="VS Code" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=anaconda" alt="Anaconda" title="Anaconda" className="skill-icon" />
-                                            <img src="https://skillicons.dev/icons?i=arduino" alt="Arduino" title="Arduino IDE" className="skill-icon" />
-                                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/PyCharm-Dark.svg" alt="PyCharm" title="PyCharm" className="skill-icon" />
-                                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/AndroidStudio-Dark.svg" alt="Android Studio" title="Android Studio" className="skill-icon" />
-                                        </div>
+                                        {renderSkillIcons([
+                                            ["git","Git"], ["docker","Docker"], ["vscode","VS Code"], ["anaconda","Anaconda"],
+                                            ["arduino","Arduino IDE"], ["android","Android Studio"]
+                                        ])}
                                         <div className="skill-cat-body">Git, Docker, Jupyter Notebook, VS Code, Anaconda, Spyder, Arduino IDE</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Medical Imaging</div>
+                                        {renderSkillIcons([
+                                            ["pytorch","PyTorch / MONAI"], ["dicom","DICOM / PyDicom"], ["numpy","NiBabel / NumPy"]
+                                        ])}
                                         <div className="skill-cat-body">NiBabel, PyDicom, 3D Slicer, MONAI (beginner)</div>
                                     </div>
 
                                     <div className="skill-category">
                                         <div className="skill-cat-label mb-4">Geospatial & Remote Sensing</div>
+                                        {renderSkillIcons([
+                                            ["earthengine","Google Earth Engine"], ["qgis","QGIS"]
+                                        ])}
                                         <div className="skill-cat-body">Google Earth Engine, QGIS (beginner)</div>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
+                        {/* Certifications Section */}
+                        <section id="certifications">
+                            <h2 className="section-title mb-8 md:mb-10" data-index="04">Certifications</h2>
+                            <div className="cert-grid">
+                                {certifications.map((cert, idx) => (
+                                    <div key={cert.title + idx} className="cert-card">
+                                        <span className="cert-issuer">{cert.issuer}</span>
+                                        <h3 className="text-lg md:text-xl font-bold text-[#F2F1EA]">
+                                            <a
+                                                href={cert.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="cert-link"
+                                                aria-label={`View ${cert.title}`}
+                                            >
+                                                {cert.title} ↗
+                                            </a>
+                                        </h3>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
                         {/* Projects Section */}
                         <section id="projects">
-                            <h2 className="section-title mb-8 md:mb-10" data-index="04">Featured Projects</h2>
+                            <h2 className="section-title mb-8 md:mb-10" data-index="05">Featured Projects</h2>
                             <div className="projects-grid" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
                                 {projects.map((p, idx) => (
                                     <div key={p.title + idx} className="project-card p-5 md:p-6">
@@ -874,7 +1063,7 @@ export default function App() {
 
                         {/* Blog Section */}
                         <section id="blog">
-                            <h2 className="section-title mb-8 md:mb-10" data-index="05">Blog Articles</h2>
+                            <h2 className="section-title mb-8 md:mb-10" data-index="06">Blog Articles</h2>
                             <div className="blog-grid">
                                 {blogData.map((post, idx) => (
                                     <a href={post.link} target="_blank" rel="noopener noreferrer" key={post.title + idx} className="project-card block p-5 md:p-6">
@@ -887,7 +1076,7 @@ export default function App() {
 
                         {/* Contact Section */}
                         <section id="resume">
-                            <h2 className="section-title mb-6" data-index="06">Get in touch</h2>
+                            <h2 className="section-title mb-6" data-index="07">Get in touch</h2>
                             <p className="text-base md:text-lg text-[#F2F1EA] mb-8 max-w-2xl leading-relaxed">
                                 My inbox is always open. Whether you have a question or just want to say hi, I'll do my best to get back to you.
                             </p>
