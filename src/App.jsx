@@ -271,7 +271,6 @@ export default function App() {
         {
             title: "Patient Referral Management System",
             company: "Smart Tech LLC",
-            status: "COMPLETED",
             desc: "Built an AI-powered healthcare referral platform that automates SMS/MMS referral intake",
             tech: ["Databricks", "Databricks Agent Framework", "Medallion Architecture", "FastAPI", "Python", "Twilio", "React Native", "OCR"],
             link: "#experience"
