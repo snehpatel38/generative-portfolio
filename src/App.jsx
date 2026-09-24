@@ -272,7 +272,7 @@ export default function App() {
             title: "Patient Referral Management System",
             company: "Smart Tech LLC",
             status: "COMPLETED",
-            desc: "Built an AI-powered healthcare referral platform that automates SMS/MMS referral intake, OCR-based document extraction, referral validation, and clinic-to-clinic routing. Developed FastAPI backend services with asynchronous processing and integrated Twilio for real-time referral communication, alongside a React Native admin application for clinic/contact management and referral tracking. Created an OCR Agent using Databricks Agent Framework and designed a Medallion Architecture (Bronze → Silver → Gold) to process, standardize, validate, and serve referral data.",
+            desc: "Built an AI-powered healthcare referral platform that automates SMS/MMS referral intake",
             tech: ["Databricks", "Databricks Agent Framework", "Medallion Architecture", "FastAPI", "Python", "Twilio", "React Native", "OCR"],
             link: "#experience"
         },
