@@ -248,17 +248,17 @@ export default function App() {
         {
             title: "Databricks Certified Machine Learning Professional",
             issuer: "DATABRICKS",
-            link: "https://www.databricks.com/learn/training/certification"
+            link: "https://credentials.databricks.com/3064c4c6-e5dc-4aa7-801b-e71870f04d17#acc.tC4LQ0eJ"
         },
         {
             title: "Databricks Certified Machine Learning Associate",
             issuer: "DATABRICKS",
-            link: "https://www.databricks.com/learn/training/certification"
+            link: "https://credentials.databricks.com/1baa64c2-ef45-448b-b99b-d5caca49420f#acc.TjRDNs3S"
         },
         {
             title: "Machine Learning Specialization",
             issuer: "DEEPLEARNING.AI",
-            link: "https://www.deeplearning.ai/specializations/machine-learning"
+            link: "https://coursera.org/share/1150f7300cfc626d0edf64f246b00709"
         }
     ];
 
